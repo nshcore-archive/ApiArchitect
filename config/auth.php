@@ -54,7 +54,7 @@ return [
     'providers' => [
         'jwt' => [
             'driver' => 'doctrine',
-            'model' => \ApiArchitect\Compass\Entities\User::class
+            'model' => \ApiArchitect\Auth\Entities\User::class
         ]
     ],
     /*
