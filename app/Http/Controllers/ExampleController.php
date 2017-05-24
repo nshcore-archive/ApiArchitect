@@ -2,17 +2,23 @@
 
 namespace App\Http\Controllers;
 
-class ExampleController extends Controller
+use ApiArchitect\Compass\Http\Controllers\RestApi;
+
+class ExampleController extends RestApi
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+
+    public function __construct(ResourceRepository $repository, ObjectTransformer $objectTransformer)
     {
-        //
+        parent::__construct($repository,$objectTransformer);
     }
 
-    //
+    public function store(ServerRequestInterface $request)
+    {
+
+        return $this->createdResponse(Fractal()
+            ->item($app->version())
+            ->transformWith($this->transformer)
+            ->serializeWith(new ArraySerialization())
+            ->toJson());
+    }
 }

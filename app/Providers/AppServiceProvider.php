@@ -80,8 +80,9 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->register(\ApiArchitect\Compass\Providers\CompassServiceProvider::class);
         $this->app->register(\ApiArchitect\Auth\Providers\AuthServiceProvider::class);
-        $this->app->register(\App\Providers\HelperServiceProvider::class);
         $this->app->register(\ApiArchitect\Log\Providers\LogServiceProvider::class);
+        $this->app->register(\App\Providers\HelperServiceProvider::class);
+        $this->app->register(\App\Providers\EventServiceProvider::class);
 
         if(getenv('APP_ENV') === 'local') {
             $this->app->register(\Appzcoder\LumenRoutesList\RoutesCommandServiceProvider::class);
