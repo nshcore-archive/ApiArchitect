@@ -2,14 +2,14 @@
 
 namespace App\Http\Transformers;
 
-use League\Fractal\TransformerAbstract;
+use League\Fractal\AbstractTransformer;
 use Jkirkby91\Boilers\RestServerBoiler\TransformerContract;
 
 /**
  * Class ExampleTransformer
  * @package App\Http\Transformers
  */
-class ExampleTransformer extends TransformerAbstract implements TransformerContract
+class ExampleTransformer extends AbstractTransformer implements TransformerContract
 {
     /**
      * @param $array
@@ -20,7 +20,7 @@ class ExampleTransformer extends TransformerAbstract implements TransformerContr
         return [
             'id'            => (int)$exampleEntity->getId(),
             'name'          => $exampleEntity->getName(),
-            'field'          => $exampleEntity->getfield()
+            'field'         => $exampleEntity->getfield()
         ];
     }
 }

@@ -3,8 +3,7 @@
 namespace App\Entities;
 
 use Doctrine\ORM\Mapping as ORM;
-use Jkirkby91\LumenDoctrineComponent\Entities\LumenDoctrineEntity;
-use jkirkby91\Boilers\SchemaBoilers\SchemaContract;
+use ApiArchitect\Compass\Entities\AbstractResourceEntity;
 /**
  * Class Thing
  *
@@ -12,7 +11,7 @@ use jkirkby91\Boilers\SchemaBoilers\SchemaContract;
  * @author James Kirkby <jkirkby91@gmail.com>
  *
  */
-class ExampleEntity extends LumenDoctrineEntity implements SchemaContract
+class ExampleEntity extends LumenDoctrineEntity
 {
     /**
      * @ORM\Column(type="string", length=299, nullable=false)

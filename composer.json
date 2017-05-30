@@ -9,6 +9,7 @@
         "laravel/lumen-framework": "5.4.*",
         "vlucas/phpdotenv": "~2.2",
         "apiarchitect/compass": "dev-master",
+        "apiarchitect/Auth": "dev-master",
         "apiarchitect/log": "dev-master"
     },
     "require-dev": {

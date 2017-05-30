@@ -3,8 +3,9 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use ApiArchitect\Compass\Http\Middleware\AbstractMiddleware;
 
-class ExampleMiddleware
+class ExampleMiddleware extends AbstractMiddleware
 {
     /**
      * Handle an incoming request.

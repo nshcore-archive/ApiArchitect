@@ -24,7 +24,8 @@ class AppServiceProvider extends ServiceProvider
         $this->injectTransformersToControllers();
         $this->registerServiceProviders();
         $this->bindContracts();
-        $this->loadFilesystem();               
+        $this->loadFilesystem();
+        $this->registerMiddleware();
     }
 
     public function registerConfigs()
@@ -32,7 +33,6 @@ class AppServiceProvider extends ServiceProvider
         $this->app->configure('app');
         $this->app->configure('auth');
         $this->app->configure('jwt');
-        $this->app->configure('filesystems');
         $this->app->configure('database');
         $this->app->configure('lumendoctrine');
         $this->app->configure('doctrine');
@@ -43,9 +43,14 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Inject dependencies to controllers
      */
-    public function injectTransformersToControllers()
+    public function injectControllerDependancies()
     {
-
+         $this->app->bind(\App\Http\Controllers\ExampleController::class, function($app) {
+             return new \App\Http\Controllers\ExampleController(
+                 $app['em']->getRepository(\App\Entities\ExampleEntity::class),
+                 new \App\Http\Transformers\ExampleTransformer
+             );
+         });
     }
 
     public function bindContracts()
@@ -53,24 +58,8 @@ class AppServiceProvider extends ServiceProvider
         //bind entity contracts
         $this->app->bind(
             '\Jkirkby91\Boilers\NodeEntityBoiler\EntityContract',
-            '\App\Entities\HairCutter'
+            '\App\Entities\ExmapleEntity'
         );
-
-        $this->app->bind(
-            '\Jkirkby91\Boilers\NodeEntityBoiler\EntityContract',
-            '\App\Entities\AggregateRating'
-        );
-    }
-
-    public function loadFilesystem()
-    {
-        //bind the file illuminate system
-        $this->app->singleton('filesystem', function ($app) {
-            return $app->loadComponent('filesystems',\Illuminate\Filesystem\FilesystemServiceProvider::class,'filesystem');
-        });
-
-        //create an alias
-        $this->app->alias('filesystem', 'Illuminate\Filesystem\FilesystemManager');
     }
 
     /**
@@ -78,14 +67,28 @@ class AppServiceProvider extends ServiceProvider
      */
     public function registerServiceProviders()
     {
+        // ApiArchitect providers
         $this->app->register(\ApiArchitect\Compass\Providers\CompassServiceProvider::class);
         $this->app->register(\ApiArchitect\Auth\Providers\AuthServiceProvider::class);
         $this->app->register(\ApiArchitect\Log\Providers\LogServiceProvider::class);
+
+        // App Providers
         $this->app->register(\App\Providers\HelperServiceProvider::class);
         $this->app->register(\App\Providers\EventServiceProvider::class);
+
+        // Repository Providers
+        $this->app->register(\App\Providers\RepositoryProvidersExampleEntityRepositoryServiceProvider::class);
 
         if(getenv('APP_ENV') === 'local') {
             $this->app->register(\Appzcoder\LumenRoutesList\RoutesCommandServiceProvider::class);
         }        
     }
+
+    /**
+     * Register middleware
+     */
+    public function registerMiddleware()
+    {
+        $this->app->middleware(\App\Http\Middleware\ExampleMiddleware::class);
+    }    
 }
