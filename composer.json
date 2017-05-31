@@ -32,6 +32,15 @@
     "scripts": {
         "post-root-package-install": [
             "php -r \"copy('.env.example', '.env');\""
+        ],
+        "generate-docker-ssl": [
+          "openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /docker/data/ssl/nginx-selfsigned.key -out /docker/data/ssl/nginx-selfsigned.crt"
+        ],
+        "generate-docker-dhparams": [
+          "openssl dhparam -out docker/data/ssl/dhparam.pem 2048"
+        ],
+        "boot-docker-env": [
+          "docker-compose -f docker/docker-compose.yml -f docker/docker-compose-dev.yml up -d --build"
         ]
     },
     "minimum-stability": "dev",

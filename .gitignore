@@ -3,3 +3,4 @@ vendor
 .phpintel
 storage/framework/cache/*
 storage/framework/logs/*
+*.log

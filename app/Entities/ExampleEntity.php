@@ -4,6 +4,7 @@ namespace App\Entities;
 
 use Doctrine\ORM\Mapping as ORM;
 use ApiArchitect\Compass\Entities\AbstractResourceEntity;
+
 /**
  * Class Thing
  *
@@ -11,7 +12,7 @@ use ApiArchitect\Compass\Entities\AbstractResourceEntity;
  * @author James Kirkby <jkirkby91@gmail.com>
  *
  */
-class ExampleEntity extends LumenDoctrineEntity
+class ExampleEntity extends AbstractResourceEntity
 {
     /**
      * @ORM\Column(type="string", length=299, nullable=false)

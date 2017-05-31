@@ -21,11 +21,10 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->registerConfigs();
-        $this->injectTransformersToControllers();
-        $this->registerServiceProviders();
         $this->bindContracts();
-        $this->loadFilesystem();
+        $this->registerServiceProviders();
         $this->registerMiddleware();
+        $this->injectControllerDependancies();
     }
 
     public function registerConfigs()
@@ -77,7 +76,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->register(\App\Providers\EventServiceProvider::class);
 
         // Repository Providers
-        $this->app->register(\App\Providers\RepositoryProvidersExampleEntityRepositoryServiceProvider::class);
+        $this->app->register(\App\Providers\RepositoryProviders\ExampleEntityRepositoryServiceProvider::class);
 
         if(getenv('APP_ENV') === 'local') {
             $this->app->register(\Appzcoder\LumenRoutesList\RoutesCommandServiceProvider::class);
