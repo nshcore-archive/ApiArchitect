@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jkirkby91-2/ApiArchitect-Auth.git",
-                "reference": "f3ac9f9e53ad22cbf8070da868f4574768ab632c"
+                "reference": "870845ad8d16bb580e21078f65b4fb28380853a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jkirkby91-2/ApiArchitect-Auth/zipball/f3ac9f9e53ad22cbf8070da868f4574768ab632c",
-                "reference": "f3ac9f9e53ad22cbf8070da868f4574768ab632c",
+                "url": "https://api.github.com/repos/jkirkby91-2/ApiArchitect-Auth/zipball/870845ad8d16bb580e21078f65b4fb28380853a1",
+                "reference": "870845ad8d16bb580e21078f65b4fb28380853a1",
                 "shasum": ""
             },
             "require": {
@@ -51,7 +51,7 @@
                 "auth",
                 "lumen"
             ],
-            "time": "2017-05-31 16:36:26"
+            "time": "2017-06-01 06:28:15"
         },
         {
             "name": "apiarchitect/compass",
@@ -59,12 +59,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jkirkby91-2/ApiArchitect-Compass.git",
-                "reference": "2fbd89b7216313c6c35aa3f34e29d3b0f730c3b3"
+                "reference": "a839e174758d38089c45c7e6eaa7d4797c5dadad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jkirkby91-2/ApiArchitect-Compass/zipball/2fbd89b7216313c6c35aa3f34e29d3b0f730c3b3",
-                "reference": "2fbd89b7216313c6c35aa3f34e29d3b0f730c3b3",
+                "url": "https://api.github.com/repos/jkirkby91-2/ApiArchitect-Compass/zipball/a839e174758d38089c45c7e6eaa7d4797c5dadad",
+                "reference": "a839e174758d38089c45c7e6eaa7d4797c5dadad",
                 "shasum": ""
             },
             "require": {
@@ -93,7 +93,7 @@
                 "core",
                 "lumen"
             ],
-            "time": "2017-05-31 16:37:02"
+            "time": "2017-06-01 07:01:13"
         },
         {
             "name": "apiarchitect/filesystem",

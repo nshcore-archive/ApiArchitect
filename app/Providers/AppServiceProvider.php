@@ -37,6 +37,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->configure('doctrine');
         $this->app->configure('acl');
         $this->app->configure('cache');
+        $this->app->configure('services');
     }
 
     /**
