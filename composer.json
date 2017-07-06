@@ -39,6 +39,9 @@
         "generate-docker-dhparams": [
           "openssl dhparam -out docker/data/ssl/dhparam.pem 2048"
         ],
+	"init-submodules": [
+	  "git submodule update --init --recursive"
+	],
         "boot-docker-env": [
           "docker-compose -f docker/docker-compose.yml -f docker/docker-compose-dev.yml up -d --build"
         ]
