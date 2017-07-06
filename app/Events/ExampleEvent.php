@@ -2,13 +2,17 @@
 
 namespace App\Events;
 
+/**
+ * Class ExampleEvent
+ *
+ * @package App\Events
+ * @author  James Kirkby <jkirkby@protonmail.ch>
+ */
 class ExampleEvent extends Event
 {
-    /**
-     * Create a new event instance.
-     *
-     * @return void
-     */
+	/**
+	 * ExampleEvent constructor.
+	 */
     public function __construct()
     {
         //
