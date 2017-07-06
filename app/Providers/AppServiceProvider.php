@@ -27,6 +27,9 @@
 			$this->injectControllerDependancies();
 		}
 
+		/**
+		 * registerConfigs()
+		 */
 		public function registerConfigs()
 		{
 			$this->app->configure('app');
@@ -37,6 +40,7 @@
 			$this->app->configure('doctrine');
 			$this->app->configure('acl');
 			$this->app->configure('cache');
+			$this->app->configure('services');
 		}
 
 		/**
