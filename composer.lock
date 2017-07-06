@@ -12,21 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jkirkby91-2/ApiArchitect-Auth.git",
-<<<<<<< HEAD
                 "reference": "67af581aebc77c72e65d40807d9fa6e4b836abf4"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/jkirkby91-2/ApiArchitect-Auth/zipball/67af581aebc77c72e65d40807d9fa6e4b836abf4",
                 "reference": "67af581aebc77c72e65d40807d9fa6e4b836abf4",
-=======
-                "reference": "870845ad8d16bb580e21078f65b4fb28380853a1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jkirkby91-2/ApiArchitect-Auth/zipball/870845ad8d16bb580e21078f65b4fb28380853a1",
-                "reference": "870845ad8d16bb580e21078f65b4fb28380853a1",
->>>>>>> f6846769ec452a716667d3bd167a3c6fb61b7fd4
                 "shasum": ""
             },
             "require": {
@@ -60,11 +51,7 @@
                 "auth",
                 "lumen"
             ],
-<<<<<<< HEAD
             "time": "2017-06-27T23:28:24+00:00"
-=======
-            "time": "2017-06-01 06:28:15"
->>>>>>> f6846769ec452a716667d3bd167a3c6fb61b7fd4
         },
         {
             "name": "apiarchitect/compass",
@@ -72,21 +59,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jkirkby91-2/ApiArchitect-Compass.git",
-<<<<<<< HEAD
                 "reference": "81904df993dba9895ef3955dabf7c6e388a0d695"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/jkirkby91-2/ApiArchitect-Compass/zipball/81904df993dba9895ef3955dabf7c6e388a0d695",
                 "reference": "81904df993dba9895ef3955dabf7c6e388a0d695",
-=======
-                "reference": "a839e174758d38089c45c7e6eaa7d4797c5dadad"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jkirkby91-2/ApiArchitect-Compass/zipball/a839e174758d38089c45c7e6eaa7d4797c5dadad",
-                "reference": "a839e174758d38089c45c7e6eaa7d4797c5dadad",
->>>>>>> f6846769ec452a716667d3bd167a3c6fb61b7fd4
                 "shasum": ""
             },
             "require": {
@@ -115,11 +93,7 @@
                 "core",
                 "lumen"
             ],
-<<<<<<< HEAD
             "time": "2017-06-27T17:50:36+00:00"
-=======
-            "time": "2017-06-01 07:01:13"
->>>>>>> f6846769ec452a716667d3bd167a3c6fb61b7fd4
         },
         {
             "name": "apiarchitect/filesystem",
