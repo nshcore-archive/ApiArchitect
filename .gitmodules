@@ -1,6 +1,0 @@
-[submodule "docker"]
-	path = docker
-	url = git@github.com:jkirkby91-2/ApiArchitect-Docker-Enviroment.git
-[submodule "public/client"]
-	path = public/client
-	url = git@github.com:jkirkby91-2/ApiArchitect-VueJS-Client.git
