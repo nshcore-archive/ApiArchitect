@@ -36,12 +36,12 @@ $app = new Laravel\Lumen\Application(
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    App\Exceptions\Handler::class
+    Healer\Api\Exceptions\Handler::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
-    App\Console\Kernel::class
+    Healer\Api\Console\Kernel::class
 );
 
 /*
@@ -54,7 +54,7 @@ $app->singleton(
 | totally optional, so you are not required to uncomment this line.
 |
 */
-$app->register(App\Providers\AppServiceProvider::class);
+$app->register(Healer\Api\Providers\AppServiceProvider::class);
 
 /*
 |--------------------------------------------------------------------------
@@ -67,7 +67,7 @@ $app->register(App\Providers\AppServiceProvider::class);
 |
 */
 
-$app->group(['namespace' => 'App\Http\Controllers'], function ($app) {
+$app->group(['namespace' => 'Healer\Api\Http\Controllers'], function ($app) {
     require __DIR__.'/../routes/api.php';
 });
 
